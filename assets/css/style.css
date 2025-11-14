@@ -1,0 +1,43 @@
+/* Header */
+
+header{
+    background-color: rgb( 228, 193, 249);
+}
+
+header nav {
+    height: 150px;
+}
+
+.container-fluid{
+    height: 100%;
+}
+
+.navbar-brand{
+    height: 100%;
+}
+
+.offb{
+    height: 90%;
+}
+
+.offcanvas-body{
+    height: 120px;
+}
+
+ul{
+    height: 90%;
+}
+
+form{
+    height: 90%;
+}
+
+.offcanvas-header{
+    background-color: rgb( 228, 193, 249);
+    height: 150px;
+}
+
+.logo{
+    width: 50px;
+}
+/* Header */
