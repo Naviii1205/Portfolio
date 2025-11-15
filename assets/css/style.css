@@ -3,8 +3,14 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-
 }   
+
+.aboutbody{
+    background-image: url(/assets/img/lightback.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
 
 /* Header */
 
@@ -81,6 +87,10 @@ main div button{
 
 /* About page */
 
+.aboutmain div{
+    background-color: rgb(94, 190, 253);
+}
+
 .meimg{
     width: 43%;
     border-radius: 15px;
@@ -113,3 +123,29 @@ main div button{
 
 
 /* About page */
+
+/* Footer */
+
+footer{
+    background-color: rgb(102, 102, 102);
+    height: 200px;
+}
+
+footer .name{
+    text-align: center;
+    padding: 20px 0px 0px;
+    font-size: 17px;
+}
+
+footer .take{
+    text-align: center;
+    padding: 5px 0px 0px;
+}
+
+
+.social{
+    display: flex;
+    justify-content: center;
+    padding: 25px 0px 0px 0px;
+}
+/* Footer */
