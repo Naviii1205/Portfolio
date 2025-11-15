@@ -69,4 +69,47 @@ main div button{
     width: 100%;
 }
 
+.fs-1{
+    color: 	rgb(13,13,13);
+}
+
+.mainbutton button{
+    color: 	rgb(23, 23, 23);
+}
+
 /* Main page */
+
+/* About page */
+
+.meimg{
+    width: 43%;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+.meimgdiv{
+    display: flex;
+    align-items: center;
+}
+
+.meimgdiv .p1{
+    text-align: center;
+    width: 53%;
+    font-size: 45px;
+}
+
+.abouttlt{
+    color: 	rgb(13,13,13);
+    padding: 5px;
+}
+
+.hellotlt{
+    color: 	rgb(13,13,13);
+}
+
+.extratlt{
+    color: 	rgb(13,13,13);
+}
+
+
+/* About page */
