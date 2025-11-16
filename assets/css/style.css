@@ -5,7 +5,7 @@ body{
     background-attachment: fixed;
 }   
 
-.aboutbody{
+.lighttheme{
     background-image: url(/assets/img/lightback.png);
     background-repeat: no-repeat;
     background-size: cover;
@@ -187,6 +187,124 @@ main div button{
 }
 
 /* Projects page */
+
+/* Experience page */
+
+.experience{
+    border-radius: 5px;
+    background-color:  rgb(94, 190, 253);
+}
+
+.experience div{
+    border-radius: 0;
+    background-color:  rgb(94, 190, 253);
+}
+
+.exp{
+    text-align: end;
+}
+
+.lang .spa{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lang .spatxt{
+    font-size: 20px;
+    margin: 0;
+    padding: 0px 8px 0px 0px;
+}
+
+.col-2{
+    align-content: center;
+    justify-content: center;
+}
+
+.col-4{
+    justify-content: right;
+    align-content: center;
+}
+
+.col-6{
+    justify-items: center;
+    align-content: center;
+}
+
+.kaoedu{
+    font-size: 50px;
+}
+
+.kaoexp{
+    font-size: 50px;
+}
+
+.lang .eng{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lang .engtxt{
+    font-size: 20px;
+    margin: 0;
+    padding: 0px 8px 0px 0px;
+}
+
+.lang .jap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lang .japtxt{
+    font-size: 20px;
+    margin: 0;
+    padding: 0px 8px 0px 0px;
+}
+
+.lang h2{
+    padding: 0px 0px 10px 0px;
+    text-align: center;
+}
+
+.soft{
+    text-align: center;
+}
+
+.soft h2{
+    padding: 10px;
+}
+
+@media(max-width: 991px){
+    .kaoedu{
+        font-size: 35px;
+    }
+    .
+}
+
+@media(max-width: 480px){
+    .kaoedu{
+        font-size: 20px;
+    }
+}
+
+@media(max-width: 991px){
+    .kaoexp{
+        font-size: 30px;
+    }
+    .col-2 h2{
+        writing-mode: vertical-lr;
+    }
+}
+
+@media(max-width: 480px){
+    .kaoexp{
+        font-size: 15px;
+    }
+}
+
+/* Experience page */
 
 /* Footer */
 
