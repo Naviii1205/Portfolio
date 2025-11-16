@@ -280,7 +280,6 @@ main div button{
     .kaoedu{
         font-size: 35px;
     }
-    .
 }
 
 @media(max-width: 480px){
@@ -305,6 +304,32 @@ main div button{
 }
 
 /* Experience page */
+
+/* Contact page */
+
+.contimg{
+    width: 200px;
+    border-radius: 40px;
+}
+.continfo{
+    text-align: center;
+}
+
+.contlist{
+    list-style-type: none;
+}
+
+.contimgdiv{
+    display: flex;
+    justify-content: center;
+}
+
+.contact{
+    display: flex;
+    justify-content: center;
+}
+
+/* Contact page */
 
 /* Footer */
 
