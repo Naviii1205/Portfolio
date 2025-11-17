@@ -1,12 +1,12 @@
 body{
-    background-image: url("../img/back.webp");
+    background-image: url("../img/back.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
 }   
 
 .lighttheme{
-    background-image: url("../img/lightback.png");
+    background-image: url("../img/lightback.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
