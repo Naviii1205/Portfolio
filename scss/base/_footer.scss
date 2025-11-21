@@ -1,0 +1,25 @@
+/* Footer */
+
+footer {
+    background-color: rgb(102, 102, 102);
+    height: 200px;
+
+    .name {
+        text-align: center;
+        padding: 20px 0px 0px;
+        font-size: 17px;
+    }
+
+    .take {
+        text-align: center;
+        padding: 5px 0px 0px;
+    }
+
+    .social {
+        display: flex;
+        justify-content: center;
+        padding: 25px 0px 0px 0px;
+    }
+}
+
+/* Footer */

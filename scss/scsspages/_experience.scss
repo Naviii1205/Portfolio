@@ -1,0 +1,114 @@
+/* Experience page */
+
+.experience {
+    border-radius: 5px;
+    background-color: rgb(94, 190, 253);
+
+    div {
+        border-radius: 0;
+        background-color: rgb(94, 190, 253);
+
+        .col-2 {
+            align-content: center;
+            justify-content: center;
+
+            @media(max-width: 991px) {
+                writing-mode: vertical-lr;
+                justify-content: center;
+            }
+        }
+
+        .col-4 {
+            justify-content: right;
+            align-content: center;
+        }
+
+        .col-6 {
+            justify-items: center;
+            align-content: center;
+        }
+
+        .kaoedu {
+            font-size: 50px;
+
+            @media(max-width: 991px) {
+                font-size: 35px;
+            }
+
+            @media(max-width: 480px) {
+                font-size: 20px;
+            }
+        }
+
+    }
+
+    .exp {
+        text-align: end;
+
+        .kaoexp {
+            font-size: 50px;
+
+            @media(max-width: 991px) {
+                font-size: 30px;
+            }
+
+            @media(max-width: 480px) {
+                font-size: 15px;
+            }
+        }
+
+    }
+
+    .soft {
+        text-align: center;
+
+        h2 {
+            padding: 10px;
+        }
+    }
+
+    .lang {
+        h2 {
+            padding: 0px 0px 10px 0px;
+            text-align: center;
+        }
+
+        .spa {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .spatxt {
+                font-size: 20px;
+                margin: 0;
+                padding: 0px 8px 0px 0px;
+            }
+        }
+
+        .eng {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .engtxt {
+                font-size: 20px;
+                margin: 0;
+                padding: 0px 8px 0px 0px;
+            }
+        }
+
+        .jap {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .japtxt {
+                font-size: 20px;
+                margin: 0;
+                padding: 0px 8px 0px 0px;
+            }
+        }
+    }
+}
+
+/* Experience page */
