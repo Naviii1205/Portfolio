@@ -1,4 +1,6 @@
 /* Contact page */
+@use "sass:map";
+@use "../utilities/maps" as colormap;
 
 .contact {
     display: flex;

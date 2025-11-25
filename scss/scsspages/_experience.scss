@@ -1,12 +1,14 @@
 /* Experience page */
+@use "sass:map";
+@use "../utilities/maps" as colormap;
 
 .experience {
     border-radius: 5px;
-    background-color: rgb(94, 190, 253);
+    background-color: map.get(colormap.$colors, ligth-primary-color);
 
     div {
         border-radius: 0;
-        background-color: rgb(94, 190, 253);
+        background-color: map.get(colormap.$colors, ligth-primary-color);
 
         .col-2 {
             align-content: center;

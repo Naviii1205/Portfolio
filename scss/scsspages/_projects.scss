@@ -1,4 +1,6 @@
 /* Projects page */
+@use "sass:map";
+@use "../utilities/maps" as colormap;
 
 .project {
     display: grid;
@@ -54,7 +56,7 @@
             top: calc(50% - 30px);
             left: 12%;
             position: absolute;
-            color: white;
+            color: map.get(colormap.$colors, forth-color);
             z-index: 2;
             opacity: 0;
         }

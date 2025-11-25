@@ -1,19 +1,21 @@
 /* Main page */
+@use "sass:map";
+@use "../utilities/maps" as colormap;
 
 main {
     padding: 40px;
 
     div {
-        background-color: rgb(115, 36, 36);
+        background-color: map.get(colormap.$colors, primary-color);
         padding: 25px;
         border-radius: 5px;
 
         .fs-1 {
-            color: rgb(13, 13, 13);
+            color: map.get(colormap.$colors, secondary-color);
         }
 
         .mainbutton button {
-            color: rgb(23, 23, 23);
+            color:  map.get(colormap.$colors, secondary-color);
             width: 100%;
         }
     }

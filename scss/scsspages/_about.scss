@@ -1,21 +1,23 @@
 /* About page */
+@use "sass:map";
+@use "../utilities/maps" as colormap;
 
 .aboutmain {
     div {
-        background-color: rgb(94, 190, 253);
+        background-color: map.get(colormap.$colors, ligth-primary-color);
         border-radius: 5px;
 
         .abouttlt {
-            color: rgb(13, 13, 13);
+            color: map.get(colormap.$colors, secondary-color);
             padding: 5px;
         }
 
         .hellotlt {
-            color: rgb(13, 13, 13);
+            color:  map.get(colormap.$colors, secondary-color);
         }
 
         .extratlt {
-            color: rgb(13, 13, 13);
+            color:  map.get(colormap.$colors, secondary-color);
         }
 
     }

@@ -1,7 +1,9 @@
 /* Footer */
+@use "sass:map";
+@use "../utilities/maps" as colormap;
 
 footer {
-    background-color: rgb(102, 102, 102);
+    background-color: map.get(colormap.$colors,terciary-color);
     height: 200px;
 
     .name {
