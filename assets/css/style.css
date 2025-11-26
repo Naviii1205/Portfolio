@@ -90,6 +90,14 @@ main div .mainbutton button {
   justify-content: center;
   align-items: center;
 }
+@media (max-width: 991px) {
+  .aboutmain .meimgdiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}
 .aboutmain .meimgdiv .p1 {
   text-align: center;
   width: 53%;
@@ -97,13 +105,18 @@ main div .mainbutton button {
 }
 @media (max-width: 991px) {
   .aboutmain .meimgdiv .p1 {
-    font-size: 20px;
+    font-size: 18px;
   }
 }
 .aboutmain .meimgdiv .meimg {
   width: 43%;
   border-radius: 15px;
   padding: 10px;
+}
+@media (max-width: 991px) {
+  .aboutmain .meimgdiv .meimg {
+    width: 100%;
+  }
 }
 
 /* About page */
@@ -113,9 +126,9 @@ main div .mainbutton button {
   grid-template-columns: 50% 50%;
   grid-template-rows: 50% 50%;
 }
-@media (max-width: 991px) {
+@media (max-width: 760px) {
   .project {
-    grid-template-columns: 420px;
+    grid-template-columns: 100%;
     grid-template-rows: repeat(4, 250px);
     justify-content: center;
   }
@@ -149,7 +162,7 @@ main div .mainbutton button {
 .project div:hover p {
   opacity: 1;
 }
-.project div p {
+.project div .full {
   width: 80%;
   text-align: center;
   top: calc(50% - 30px);
@@ -158,6 +171,40 @@ main div .mainbutton button {
   color: rgb(255, 255, 255);
   z-index: 2;
   opacity: 0;
+}
+@media (max-width: 760px) {
+  .project div .full {
+    width: 80%;
+    text-align: center;
+    top: calc(50% - 50px);
+    left: 12%;
+    position: absolute;
+    color: rgb(255, 255, 255);
+    z-index: 2;
+    opacity: 0;
+  }
+}
+.project div .empty {
+  width: 80%;
+  text-align: center;
+  top: calc(50% - 30px);
+  left: 12%;
+  position: absolute;
+  color: rgb(255, 255, 255);
+  z-index: 2;
+  opacity: 0;
+}
+@media (max-width: 760px) {
+  .project div .empty {
+    width: 80%;
+    text-align: center;
+    top: calc(50% - 35px);
+    left: 12%;
+    position: absolute;
+    color: rgb(255, 255, 255);
+    z-index: 2;
+    opacity: 0;
+  }
 }
 
 /* Projects page */
@@ -173,86 +220,98 @@ main div .mainbutton button {
 .experience div .col-2 {
   justify-content: center;
   align-content: center;
+  font-size: 24px;
 }
 @media (max-width: 991px) {
   .experience div .col-2 {
     writing-mode: vertical-lr;
-    justify-content: center;
-  }
-}
-.experience div .col-4 {
-  justify-content: rigth;
-  align-content: center;
-}
-.experience div .col-6 {
-  justify-content: center;
-  align-content: center;
-}
-.experience div .kaoedu {
-  font-size: 50px;
-}
-@media (max-width: 991px) {
-  .experience div .kaoedu {
-    font-size: 35px;
-  }
-}
-@media (max-width: 480px) {
-  .experience div .kaoedu {
     font-size: 20px;
   }
 }
-.experience .exp {
-  text-align: end;
+@media (max-width: 480px) {
+  .experience div .col-2 {
+    writing-mode: vertical-lr;
+    font-size: 12px;
+  }
 }
-.experience .exp .kaoexp {
-  font-size: 50px;
+.experience .col-3 {
+  justify-content: center;
+  align-content: center;
+}
+.experience .col-7 {
+  justify-content: center;
+  align-content: center;
+}
+.experience .kaoedu {
+  font-size: 40px;
+  justify-self: right;
 }
 @media (max-width: 991px) {
-  .experience .exp .kaoexp {
+  .experience .kaoedu {
+    font-size: 23px;
+  }
+}
+@media (max-width: 480px) {
+  .experience .kaoedu {
+    display: none;
+  }
+}
+
+.exp .explist {
+  direction: rtl;
+}
+.exp .kaoexp {
+  font-size: 40px;
+  justify-self: left;
+}
+@media (max-width: 991px) {
+  .exp .kaoexp {
     font-size: 30px;
   }
 }
 @media (max-width: 480px) {
-  .experience .exp .kaoexp {
-    font-size: 15px;
+  .exp .kaoexp {
+    display: none;
   }
 }
-.experience .soft {
+
+.soft {
   text-align: center;
 }
-.experience .soft h2 {
+.soft h2 {
   padding: 10px;
 }
-.experience .lang h2 {
+
+.lang h2 {
   padding: 0px 0px 10px 0px;
   text-align: center;
 }
-.experience .lang .spa {
+.lang .spa {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.experience .lang .spa .spatxt {
+.lang .spa .spatxt {
   font-size: 20px;
   margin: 0;
   padding: 0px 8px 0px 0px;
 }
-.experience .lang .eng {
+.lang .eng {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.experience .lang .eng .engtxt {
+.lang .eng .engtxt {
   font-size: 20px;
   margin: 0;
   padding: 0px 8px 0px 0px;
 }
-.experience .lang .jap {
+.lang .jap {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.experience .lang .jap .japtxt {
+.lang .jap .japtxt {
   font-size: 20px;
   margin: 0;
   padding: 0px 8px 0px 0px;
@@ -273,6 +332,11 @@ main div .mainbutton button {
 .contact .contimgdiv .contimg {
   width: 200px;
   border-radius: 40px;
+}
+@media (max-width: 500px) {
+  .contact .contimgdiv .contimg {
+    width: 100%;
+  }
 }
 .contact .continfo {
   text-align: center;

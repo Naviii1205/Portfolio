@@ -14,11 +14,11 @@
         }
 
         .hellotlt {
-            color:  map.get(colormap.$colors, secondary-color);
+            color: map.get(colormap.$colors, secondary-color);
         }
 
         .extratlt {
-            color:  map.get(colormap.$colors, secondary-color);
+            color: map.get(colormap.$colors, secondary-color);
         }
 
     }
@@ -26,13 +26,18 @@
     .meimgdiv {
         @include mixin.flex-aling(flex, center, center);
 
+        @media (max-width: 991px) {
+            @include mixin.flex-aling(flex, center, center);
+            flex-direction: column;
+        }
+
         .p1 {
             text-align: center;
             width: 53%;
             font-size: 45px;
 
             @media (max-width: 991px) {
-                font-size: 20px;
+                font-size: 18px;
             }
         }
 
@@ -40,9 +45,15 @@
             width: 43%;
             border-radius: 15px;
             padding: 10px;
-        }
 
+            @media (max-width: 991px) {
+                width: 100%;
+            }
+
+        }
     }
+
 }
+
 
 /* About page */

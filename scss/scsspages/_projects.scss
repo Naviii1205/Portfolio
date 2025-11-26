@@ -7,9 +7,9 @@
     grid-template-columns: 50% 50%;
     grid-template-rows: 50% 50%;
 
-    @media(max-width: 991px) {
+    @media(max-width: 760px) {
 
-        grid-template-columns: 420px;
+        grid-template-columns: 100%;
         grid-template-rows: repeat(4, 250px);
         justify-content: center;
 
@@ -50,7 +50,7 @@
             opacity: 1;
         }
 
-        p {
+        .full {
             width: 80%;
             text-align: center;
             top: calc(50% - 30px);
@@ -59,6 +59,44 @@
             color: map.get(colormap.$colors, forth-color);
             z-index: 2;
             opacity: 0;
+
+            @media(max-width: 760px) {
+
+                width: 80%;
+                text-align: center;
+                top: calc(50% - 50px);
+                left: 12%;
+                position: absolute;
+                color: map.get(colormap.$colors, forth-color);
+                z-index: 2;
+                opacity: 0;
+
+
+            }
+        }
+        .empty{
+            width: 80%;
+            text-align: center;
+            top: calc(50% - 30px);
+            left: 12%;
+            position: absolute;
+            color: map.get(colormap.$colors, forth-color);
+            z-index: 2;
+            opacity: 0;
+
+            @media(max-width: 760px) {
+
+                width: 80%;
+                text-align: center;
+                top: calc(50% - 35px);
+                left: 12%;
+                position: absolute;
+                color: map.get(colormap.$colors, forth-color);
+                z-index: 2;
+                opacity: 0;
+
+
+            }
         }
     }
 }

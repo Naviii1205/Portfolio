@@ -11,98 +11,111 @@
         border-radius: 0;
         background-color: map.get(colormap.$colors, ligth-primary-color);
 
+
         .col-2 {
             @include mixin.box-aling(center, center);
+            font-size: 24px;
 
             @media(max-width: 991px) {
                 writing-mode: vertical-lr;
-                justify-content: center;
-            }
-        }
-
-        .col-4 {
-            @include mixin.box-aling(rigth, center);
-        }
-
-        .col-6 {
-            @include mixin.box-aling(center, center);
-        }
-
-        .kaoedu {
-            font-size: 50px;
-
-            @media(max-width: 991px) {
-                font-size: 35px;
-            }
-
-            @media(max-width: 480px) {
                 font-size: 20px;
             }
-        }
-
-    }
-
-    .exp {
-        text-align: end;
-
-        .kaoexp {
-            font-size: 50px;
-
-            @media(max-width: 991px) {
-                font-size: 30px;
-            }
 
             @media(max-width: 480px) {
-                font-size: 15px;
+                writing-mode: vertical-lr;
+                font-size: 12px;
             }
         }
-
     }
 
-    .soft {
+    .col-3 {
+        @include mixin.box-aling(center, center);
+    }
+
+    .col-7 {
+        @include mixin.box-aling(center, center);
+    }
+
+    .kaoedu {
+        font-size: 40px;
+        justify-self: right;
+
+        @media(max-width: 991px) {
+            font-size: 23px;
+        }
+
+        @media(max-width: 480px) {
+            display: none;
+        }
+    }
+
+}
+
+.exp {
+
+    .explist {
+        direction: rtl;
+    }
+
+    .kaoexp {
+        font-size: 40px;
+        justify-self: left;
+
+        @media(max-width: 991px) {
+            font-size: 30px;
+        }
+
+        @media(max-width: 480px) {
+            display: none;
+        }
+    }
+
+}
+
+.soft {
+    text-align: center;
+
+    h2 {
+        padding: 10px;
+    }
+}
+
+.lang {
+    h2 {
+        padding: 0px 0px 10px 0px;
         text-align: center;
+    }
 
-        h2 {
-            padding: 10px;
+    .spa {
+        @include mixin.flex-aling(flex, center, center);
+
+        .spatxt {
+            font-size: 20px;
+            margin: 0;
+            padding: 0px 8px 0px 0px;
         }
     }
 
-    .lang {
-        h2 {
-            padding: 0px 0px 10px 0px;
-            text-align: center;
+    .eng {
+        @include mixin.flex-aling(flex, center, center);
+
+        .engtxt {
+            font-size: 20px;
+            margin: 0;
+            padding: 0px 8px 0px 0px;
         }
+    }
 
-        .spa {
-            @include mixin.flex-aling(flex, center, center);
+    .jap {
+        @include mixin.flex-aling(flex, center, center);
 
-            .spatxt {
-                font-size: 20px;
-                margin: 0;
-                padding: 0px 8px 0px 0px;
-            }
-        }
-
-        .eng {
-            @include mixin.flex-aling(flex, center, center);
-
-            .engtxt {
-                font-size: 20px;
-                margin: 0;
-                padding: 0px 8px 0px 0px;
-            }
-        }
-
-        .jap {
-            @include mixin.flex-aling(flex, center, center);
-
-            .japtxt {
-                font-size: 20px;
-                margin: 0;
-                padding: 0px 8px 0px 0px;
-            }
+        .japtxt {
+            font-size: 20px;
+            margin: 0;
+            padding: 0px 8px 0px 0px;
         }
     }
 }
+
 
 /* Experience page */
