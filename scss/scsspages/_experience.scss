@@ -1,6 +1,7 @@
 /* Experience page */
 @use "sass:map";
 @use "../utilities/maps" as colormap;
+@use "../utilities/mixin";
 
 .experience {
     border-radius: 5px;
@@ -11,8 +12,7 @@
         background-color: map.get(colormap.$colors, ligth-primary-color);
 
         .col-2 {
-            align-content: center;
-            justify-content: center;
+            @include mixin.box-aling(center, center);
 
             @media(max-width: 991px) {
                 writing-mode: vertical-lr;
@@ -21,13 +21,11 @@
         }
 
         .col-4 {
-            justify-content: right;
-            align-content: center;
+            @include mixin.box-aling(rigth, center);
         }
 
         .col-6 {
-            justify-items: center;
-            align-content: center;
+            @include mixin.box-aling(center, center);
         }
 
         .kaoedu {
@@ -76,9 +74,7 @@
         }
 
         .spa {
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            @include mixin.flex-aling(flex, center, center);
 
             .spatxt {
                 font-size: 20px;
@@ -88,9 +84,7 @@
         }
 
         .eng {
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            @include mixin.flex-aling(flex, center, center);
 
             .engtxt {
                 font-size: 20px;
@@ -100,9 +94,7 @@
         }
 
         .jap {
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            @include mixin.flex-aling(flex, center, center);
 
             .japtxt {
                 font-size: 20px;

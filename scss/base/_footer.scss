@@ -1,6 +1,7 @@
 /* Footer */
 @use "sass:map";
 @use "../utilities/maps" as colormap;
+@use "../utilities/mixin";
 
 footer {
     background-color: map.get(colormap.$colors,terciary-color);
@@ -18,8 +19,7 @@ footer {
     }
 
     .social {
-        display: flex;
-        justify-content: center;
+        @include mixin.flex-aling(flex, center, center);
         padding: 25px 0px 0px 0px;
     }
 }

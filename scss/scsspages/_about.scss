@@ -1,6 +1,7 @@
 /* About page */
 @use "sass:map";
 @use "../utilities/maps" as colormap;
+@use "../utilities/mixin";
 
 .aboutmain {
     div {
@@ -23,8 +24,7 @@
     }
 
     .meimgdiv {
-        display: flex;
-        align-items: center;
+        @include mixin.flex-aling(flex, center, center);
 
         .p1 {
             text-align: center;

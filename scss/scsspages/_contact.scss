@@ -1,14 +1,13 @@
 /* Contact page */
 @use "sass:map";
 @use "../utilities/maps" as colormap;
+@use "../utilities/mixin";
 
 .contact {
-    display: flex;
-    justify-content: center;
+    @include mixin.flex-aling(flex, center, center);
 
     .contimgdiv {
-        display: flex;
-        justify-content: center;
+        @include mixin.flex-aling(flex, center, center);
 
         .contimg {
             width: 200px;

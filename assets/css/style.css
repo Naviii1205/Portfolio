@@ -87,6 +87,7 @@ main div .mainbutton button {
 }
 .aboutmain .meimgdiv {
   display: flex;
+  justify-content: center;
   align-items: center;
 }
 .aboutmain .meimgdiv .p1 {
@@ -170,8 +171,8 @@ main div .mainbutton button {
   background-color: rgb(94, 190, 253);
 }
 .experience div .col-2 {
-  align-content: center;
   justify-content: center;
+  align-content: center;
 }
 @media (max-width: 991px) {
   .experience div .col-2 {
@@ -180,11 +181,11 @@ main div .mainbutton button {
   }
 }
 .experience div .col-4 {
-  justify-content: right;
+  justify-content: rigth;
   align-content: center;
 }
 .experience div .col-6 {
-  justify-items: center;
+  justify-content: center;
   align-content: center;
 }
 .experience div .kaoedu {
@@ -262,10 +263,12 @@ main div .mainbutton button {
 .contact {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 .contact .contimgdiv {
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 .contact .contimgdiv .contimg {
   width: 200px;
@@ -296,6 +299,7 @@ footer .take {
 footer .social {
   display: flex;
   justify-content: center;
+  align-items: center;
   padding: 25px 0px 0px 0px;
 }
 
