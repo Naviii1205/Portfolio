@@ -15,6 +15,7 @@
 
     .edu {
         display: grid;
+        grid-template-columns: 1fr 2fr;
         grid-template-areas:
             "edutlt  kaoedu"
             "edulist  kaoedu"
@@ -48,16 +49,20 @@
 
         .edutlt {
             grid-area: edutlt;
+            text-align: center;
         }
 
         .edulist {
             grid-area: edulist;
+            display: grid;
+            justify-content: center;
         }
     }
 
     .exp {
 
         display: grid;
+        grid-template-columns: 2fr 1fr;
         grid-template-areas:
             "kaoexp exptlt"
             "kaoexp explist"
@@ -91,11 +96,13 @@
 
         .exptlt {
             grid-area: exptlt;
-            text-align: end;
+            text-align: center;
         }
 
         .explist {
             grid-area: explist;
+            display: grid;
+            justify-content: center;
             direction: rtl;
         }
     }

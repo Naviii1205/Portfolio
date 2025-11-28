@@ -274,6 +274,7 @@ main .indexprotxt p {
 }
 .experiencemain .edu {
   display: grid;
+  grid-template-columns: 1fr 2fr;
   grid-template-areas: "edutlt  kaoedu" "edulist  kaoedu";
 }
 @media (max-width: 991px) {
@@ -303,12 +304,16 @@ main .indexprotxt p {
 }
 .experiencemain .edu .edutlt {
   grid-area: edutlt;
+  text-align: center;
 }
 .experiencemain .edu .edulist {
   grid-area: edulist;
+  display: grid;
+  justify-content: center;
 }
 .experiencemain .exp {
   display: grid;
+  grid-template-columns: 2fr 1fr;
   grid-template-areas: "kaoexp exptlt" "kaoexp explist";
 }
 @media (max-width: 991px) {
@@ -338,10 +343,12 @@ main .indexprotxt p {
 }
 .experiencemain .exp .exptlt {
   grid-area: exptlt;
-  text-align: end;
+  text-align: center;
 }
 .experiencemain .exp .explist {
   grid-area: explist;
+  display: grid;
+  justify-content: center;
   direction: rtl;
 }
 .experiencemain .soft-lang {
