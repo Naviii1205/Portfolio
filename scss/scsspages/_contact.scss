@@ -4,20 +4,22 @@
 @use "../utilities/mixin";
 
 .contact {
-    @include mixin.flex-aling(flex, center, center);
+    display: grid;
+    column-gap: 50px;
+    grid-template-columns: 1fr 2fr;
 
     .contimgdiv {
-        @include mixin.flex-aling(flex, center, center);
+        display: grid;
+        justify-content: center;
 
         .contimg {
             width: 200px;
-            border-radius: 40px;
-
-            @media (max-width: 500px) {
-                width: 100%;
-
-            }
+            border-radius: 4px;
         }
+    }
+
+    h3 {
+        text-align: center;
     }
 
     .continfo {
@@ -25,9 +27,29 @@
     }
 
     .contlist {
-        list-style-type: none;
+        list-style: none;
     }
 
+    .nametlt {
+        color: map.get(colormap.$colors, secondary-color);
+    }
+
+    .emailtlt {
+        color: map.get(colormap.$colors, secondary-color);
+    }
+
+    .numbertlt {
+        color: map.get(colormap.$colors, secondary-color);
+    }
+
+    .texttlt {
+        color: map.get(colormap.$colors, secondary-color);
+    }
+
+    .formbtn {
+        display: grid;
+        justify-content: end;
+    }
 }
 
 /* Contact page */

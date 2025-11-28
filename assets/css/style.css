@@ -401,29 +401,42 @@ main .indexprotxt p {
 /* Experience page */
 /* Contact page */
 .contact {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  column-gap: 50px;
+  grid-template-columns: 1fr 2fr;
 }
 .contact .contimgdiv {
-  display: flex;
+  display: grid;
   justify-content: center;
-  align-items: center;
 }
 .contact .contimgdiv .contimg {
   width: 200px;
-  border-radius: 40px;
+  border-radius: 4px;
 }
-@media (max-width: 500px) {
-  .contact .contimgdiv .contimg {
-    width: 100%;
-  }
+.contact h3 {
+  text-align: center;
 }
 .contact .continfo {
   text-align: center;
 }
 .contact .contlist {
-  list-style-type: none;
+  list-style: none;
+}
+.contact .nametlt {
+  color: rgb(13, 13, 13);
+}
+.contact .emailtlt {
+  color: rgb(13, 13, 13);
+}
+.contact .numbertlt {
+  color: rgb(13, 13, 13);
+}
+.contact .texttlt {
+  color: rgb(13, 13, 13);
+}
+.contact .formbtn {
+  display: grid;
+  justify-content: end;
 }
 
 /* Contact page */

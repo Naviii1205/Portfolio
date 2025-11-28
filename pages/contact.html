@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" >
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
@@ -16,8 +16,8 @@
     <header>
         <nav class="navbar navbar-expand-lg" data-bs-theme="dark"> <!-- Tamaño del navbar -->
             <div class="container-fluid">
-                <a class="navbar-brand"
-                    href="../index.html"><img class="logo" src="../assets/img/logo.png" alt="logo">Naviii</a>
+                <a class="navbar-brand" href="../index.html"><img class="logo" src="../assets/img/logo.png"
+                        alt="logo">Naviii</a>
                 <!-- Titulo navbar -->
                 <div class="offb"> <!-- boton del oofscreen menu -->
                     <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
@@ -60,13 +60,15 @@
             </div>
         </nav>
     </header>
-    <main class="contact">
+    <main class="contact container">
         <div>
             <div class="contimgdiv">
                 <img class="contimg" src="../assets/img/bleh.jpg" alt="Contact img">
             </div>
-            <h3>Oscar Alejandro Tiusaba Pinilla</h3>
-            <p class="continfo">Web Developer-Web Designer</p>
+            <div>
+                <h3>Oscar Alejandro Tiusaba Pinilla</h3>
+                <p class="continfo">Web Developer-Web Designer</p>
+            </div>
             <div>
                 <ul class="contlist">
                     <li><i class="fa-solid fa-calendar fa-lg" style="color: #505050;"></i>13.06.2005 | Colombia, Bogota
@@ -79,6 +81,28 @@
                     </li>
                     <li><i class="fa-brands fa-twitter fa-lg" style="color: #505050;"></i> @navidraw</li>
                 </ul>
+            </div>
+        </div>
+        <div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="nametlt form-label">Name</label>
+                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Type here...">
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="emailtlt form-label">Email address</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Type here...">
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlInput1" class="numbertlt form-label">Phone Number</label>
+                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Type here...">
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="texttlt form-label">What do you need?</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Type here..."
+                    rows="6"></textarea>
+            </div>
+            <div class="formbtn">
+                <button type="button" class="btn btn-outline-dark">Submit</button>
             </div>
         </div>
     </main>
