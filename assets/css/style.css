@@ -55,18 +55,73 @@ header nav .container-fluid .offcanvas-body form {
 /* Main page */
 main {
   padding: 40px;
+  display: grid;
+  row-gap: 50px;
 }
 main div {
   background-color: rgb(115, 36, 36);
-  padding: 25px;
+  padding: 15px;
   border-radius: 5px;
 }
-main div .fs-1 {
+main .indexcondiv {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "indextlt indeximg" "indextxt indeximg" "indexbtn indeximg";
+}
+@media (max-width: 991px) {
+  main .indexcondiv {
+    display: grid;
+    justify-items: center;
+    text-align: center;
+    grid-template-columns: 1fr;
+    grid-template-areas: "indextlt" "indeximg" "indeximg" "indextxt" "indexbtn";
+  }
+}
+main .indexcondiv .indexcontlt {
+  color: rgb(13, 13, 13);
+  grid-area: indextlt;
+}
+main .indexcondiv .indexcontxt {
+  color: rgb(13, 13, 13);
+  grid-area: indextxt;
+}
+main .indexcondiv .indexconimg {
+  grid-area: indeximg;
+  display: grid;
+  justify-items: center;
+}
+main .indexcondiv .indexconimg img {
+  width: 70%;
+  border-radius: 5px;
+}
+main .indexconbtn a {
+  grid-area: indexbtn;
+}
+main .indexconbtn a button {
+  width: 100%;
   color: rgb(13, 13, 13);
 }
-main div .mainbutton button {
+main .indexprobtn {
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-areas: " . btn . ";
+  padding: 5px;
+}
+main .indexprobtn a {
+  display: grid;
+  grid-area: btn;
+  text-decoration: none;
+}
+main .indexprobtn a button {
   color: rgb(13, 13, 13);
-  width: 100%;
+}
+main .indexprotxt {
+  display: grid;
+  justify-content: center;
+  padding: 0;
+}
+main .indexprotxt p {
+  color: rgb(13, 13, 13);
 }
 
 /* Main page */
@@ -209,109 +264,135 @@ main div .mainbutton button {
 
 /* Projects page */
 /* Experience page */
-.experience {
-  border-radius: 5px;
+.experiencemain {
+  display: grid;
+  row-gap: 35px;
+}
+.experiencemain div {
+  border-radius: 4px;
   background-color: rgb(94, 190, 253);
 }
-.experience div {
-  border-radius: 0;
-  background-color: rgb(94, 190, 253);
-}
-.experience div .col-2 {
-  justify-content: center;
-  align-content: center;
-  font-size: 24px;
+.experiencemain .edu {
+  display: grid;
+  grid-template-areas: "edutlt  kaoedu" "edulist  kaoedu";
 }
 @media (max-width: 991px) {
-  .experience div .col-2 {
-    writing-mode: vertical-lr;
-    font-size: 20px;
+  .experiencemain .edu {
+    display: grid;
+    grid-template-areas: "edutlt  kaoedu" "edulist  edulist";
   }
 }
-@media (max-width: 480px) {
-  .experience div .col-2 {
-    writing-mode: vertical-lr;
-    font-size: 12px;
-  }
-}
-.experience .col-3 {
-  justify-content: center;
+.experiencemain .edu .kaoedu {
+  grid-area: kaoedu;
+  size: 100%;
+  text-align: center;
   align-content: center;
 }
-.experience .col-7 {
-  justify-content: center;
-  align-content: center;
-}
-.experience .kaoedu {
+.experiencemain .edu .kaoedu p {
   font-size: 40px;
-  justify-self: right;
 }
 @media (max-width: 991px) {
-  .experience .kaoedu {
-    font-size: 23px;
-  }
-}
-@media (max-width: 480px) {
-  .experience .kaoedu {
-    display: none;
-  }
-}
-
-.exp .explist {
-  direction: rtl;
-}
-.exp .kaoexp {
-  font-size: 40px;
-  justify-self: left;
-}
-@media (max-width: 991px) {
-  .exp .kaoexp {
+  .experiencemain .edu .kaoedu p {
     font-size: 30px;
   }
 }
-@media (max-width: 480px) {
-  .exp .kaoexp {
-    display: none;
+@media (max-width: 500px) {
+  .experiencemain .edu .kaoedu p {
+    font-size: 18px;
   }
 }
-
-.soft {
+.experiencemain .edu .edutlt {
+  grid-area: edutlt;
+}
+.experiencemain .edu .edulist {
+  grid-area: edulist;
+}
+.experiencemain .exp {
+  display: grid;
+  grid-template-areas: "kaoexp exptlt" "kaoexp explist";
+}
+@media (max-width: 991px) {
+  .experiencemain .exp {
+    display: grid;
+    grid-template-areas: "kaoexp exptlt" "explist explist";
+  }
+}
+.experiencemain .exp .kaoexp {
+  grid-area: kaoexp;
+  size: 100%;
+  text-align: center;
+  align-content: center;
+}
+.experiencemain .exp .kaoexp p {
+  font-size: 40px;
+}
+@media (max-width: 991px) {
+  .experiencemain .exp .kaoexp p {
+    font-size: 30px;
+  }
+}
+@media (max-width: 500px) {
+  .experiencemain .exp .kaoexp p {
+    font-size: 20px;
+  }
+}
+.experiencemain .exp .exptlt {
+  grid-area: exptlt;
+  text-align: end;
+}
+.experiencemain .exp .explist {
+  grid-area: explist;
+  direction: rtl;
+}
+.experiencemain .soft-lang {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "softtlt langtlt" "softicon1 spa" ". eng" " . jap";
   text-align: center;
 }
-.soft h2 {
+@media (max-width: 991px) {
+  .experiencemain .soft-lang {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: "softtlt " "softicon1" "langtlt" "spa" "eng" "jap";
+    text-align: center;
+  }
+}
+.experiencemain .soft-lang .softtlt {
+  grid-area: softtlt;
   padding: 10px;
 }
-
-.lang h2 {
-  padding: 0px 0px 10px 0px;
+.experiencemain .soft-lang .langtlt {
+  grid-area: langtlt;
   text-align: center;
-}
-.lang .spa {
-  display: flex;
   justify-content: center;
-  align-items: center;
+  align-content: center;
 }
-.lang .spa .spatxt {
+.experiencemain .soft-lang .softicon {
+  grid-area: softicon1;
+  justify-content: center;
+  align-content: center;
+}
+.experiencemain .soft-lang .spa {
+  grid-area: spa;
+}
+.experiencemain .soft-lang .spa .spatxt {
   font-size: 20px;
   margin: 0;
   padding: 0px 8px 0px 0px;
 }
-.lang .eng {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.experiencemain .soft-lang .eng {
+  grid-area: eng;
 }
-.lang .eng .engtxt {
+.experiencemain .soft-lang .eng .engtxt {
   font-size: 20px;
   margin: 0;
   padding: 0px 8px 0px 0px;
 }
-.lang .jap {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.experiencemain .soft-lang .jap {
+  grid-area: jap;
 }
-.lang .jap .japtxt {
+.experiencemain .soft-lang .jap .japtxt {
   font-size: 20px;
   margin: 0;
   padding: 0px 8px 0px 0px;

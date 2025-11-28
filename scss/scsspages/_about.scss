@@ -4,6 +4,7 @@
 @use "../utilities/mixin";
 
 .aboutmain {
+    
     div {
         background-color: map.get(colormap.$colors, ligth-primary-color);
         border-radius: 5px;

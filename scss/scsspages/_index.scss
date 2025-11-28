@@ -1,24 +1,107 @@
 /* Main page */
 @use "sass:map";
 @use "../utilities/maps" as colormap;
+@use "../utilities/mixin";
 
 main {
     padding: 40px;
+    display: grid;
+    row-gap: 50px;
 
     div {
         background-color: map.get(colormap.$colors, primary-color);
-        padding: 25px;
+        padding: 15px;
         border-radius: 5px;
+    }
 
-        .fs-1 {
-            color: map.get(colormap.$colors, secondary-color);
+    .indexcondiv {
+
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "indextlt indeximg"
+            "indextxt indeximg"
+            "indexbtn indeximg"
+        ;
+
+        @media (max-width: 991px) {
+            display: grid;
+            justify-items: center;
+            text-align: center;
+            grid-template-columns: 1fr;
+            grid-template-areas:
+                "indextlt"
+                "indeximg"
+                "indeximg"
+                "indextxt"
+                "indexbtn"
+            ;
         }
 
-        .mainbutton button {
-            color:  map.get(colormap.$colors, secondary-color);
-            width: 100%;
+        .indexcontlt {
+            color: map.get(colormap.$colors, secondary-color);
+            grid-area: indextlt;
+        }
+
+        .indexcontxt {
+            color: map.get(colormap.$colors, secondary-color);
+            grid-area: indextxt;
+        }
+
+        .indexconimg {
+            grid-area: indeximg;
+            display: grid;
+            justify-items: center;
+
+            img {
+                width: 70%;
+                border-radius: 5px;
+            }
         }
     }
+
+    .indexconbtn {
+
+        a {
+            grid-area: indexbtn;
+
+            button {
+                width: 100%;
+                color: map.get(colormap.$colors, secondary-color);
+            }
+        }
+
+    }
+
+    .indexprobtn {
+        display: grid;
+        grid-template-columns: 1fr 3fr 1fr;
+        grid-template-areas:
+            " . btn . "
+        ;
+        padding: 5px;
+
+        a {
+            display: grid;
+            grid-area: btn;
+            text-decoration: none;
+
+            button {
+                color: map.get(colormap.$colors, secondary-color);
+            }
+        }
+    }
+
+    .indexprotxt {
+        display: grid;
+        justify-content: center;
+        padding: 0;
+
+        p {
+            color: map.get(colormap.$colors, secondary-color);
+        }
+    }
+
 }
 
 /* Main page */

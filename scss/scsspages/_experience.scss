@@ -3,119 +3,179 @@
 @use "../utilities/maps" as colormap;
 @use "../utilities/mixin";
 
-.experience {
-    border-radius: 5px;
-    background-color: map.get(colormap.$colors, ligth-primary-color);
+
+.experiencemain {
+    display: grid;
+    row-gap: 35px;
 
     div {
-        border-radius: 0;
+        border-radius: 4px;
         background-color: map.get(colormap.$colors, ligth-primary-color);
+    }
 
+    .edu {
+        display: grid;
+        grid-template-areas:
+            "edutlt  kaoedu"
+            "edulist  kaoedu"
+        ;
 
-        .col-2 {
-            @include mixin.box-aling(center, center);
-            font-size: 24px;
+        @media (max-width: 991px) {
+            display: grid;
+            grid-template-areas:
+                "edutlt  kaoedu"
+                "edulist  edulist"
+        }
 
-            @media(max-width: 991px) {
-                writing-mode: vertical-lr;
-                font-size: 20px;
+        .kaoedu {
+            grid-area: kaoedu;
+            size: 100%;
+            text-align: center;
+            align-content: center;
+
+            p {
+                font-size: 40px;
+
+                @media (max-width: 991px) {
+                    font-size: 30px;
+                }
+
+                @media (max-width: 500px) {
+                    font-size: 18px;
+                }
             }
+        }
 
-            @media(max-width: 480px) {
-                writing-mode: vertical-lr;
-                font-size: 12px;
+        .edutlt {
+            grid-area: edutlt;
+        }
+
+        .edulist {
+            grid-area: edulist;
+        }
+    }
+
+    .exp {
+
+        display: grid;
+        grid-template-areas:
+            "kaoexp exptlt"
+            "kaoexp explist"
+        ;
+
+        @media (max-width: 991px) {
+            display: grid;
+            grid-template-areas:
+                "kaoexp exptlt"
+                "explist explist"
+        }
+
+        .kaoexp {
+            grid-area: kaoexp;
+            size: 100%;
+            text-align: center;
+            align-content: center;
+
+            p {
+                font-size: 40px;
+
+                @media (max-width: 991px) {
+                    font-size: 30px;
+                }
+
+                @media (max-width: 500px) {
+                    font-size: 20px;
+                }
             }
         }
-    }
 
-    .col-3 {
-        @include mixin.box-aling(center, center);
-    }
-
-    .col-7 {
-        @include mixin.box-aling(center, center);
-    }
-
-    .kaoedu {
-        font-size: 40px;
-        justify-self: right;
-
-        @media(max-width: 991px) {
-            font-size: 23px;
+        .exptlt {
+            grid-area: exptlt;
+            text-align: end;
         }
 
-        @media(max-width: 480px) {
-            display: none;
+        .explist {
+            grid-area: explist;
+            direction: rtl;
         }
     }
 
-}
 
-.exp {
-
-    .explist {
-        direction: rtl;
-    }
-
-    .kaoexp {
-        font-size: 40px;
-        justify-self: left;
-
-        @media(max-width: 991px) {
-            font-size: 30px;
-        }
-
-        @media(max-width: 480px) {
-            display: none;
-        }
-    }
-
-}
-
-.soft {
-    text-align: center;
-
-    h2 {
-        padding: 10px;
-    }
-}
-
-.lang {
-    h2 {
-        padding: 0px 0px 10px 0px;
+    .soft-lang {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "softtlt langtlt"
+            "softicon1 spa"
+            ". eng"
+            " . jap"
+        ;
         text-align: center;
-    }
 
-    .spa {
-        @include mixin.flex-aling(flex, center, center);
-
-        .spatxt {
-            font-size: 20px;
-            margin: 0;
-            padding: 0px 8px 0px 0px;
+        @media (max-width: 991px) {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-areas:
+                "softtlt "
+                "softicon1"
+                "langtlt"
+                "spa"
+                "eng"
+                "jap"
+            ;
+            text-align: center;
         }
-    }
 
-    .eng {
-        @include mixin.flex-aling(flex, center, center);
-
-        .engtxt {
-            font-size: 20px;
-            margin: 0;
-            padding: 0px 8px 0px 0px;
+        .softtlt {
+            grid-area: softtlt;
+            padding: 10px;
         }
-    }
 
-    .jap {
-        @include mixin.flex-aling(flex, center, center);
+        .langtlt {
+            grid-area: langtlt;
+            text-align: center;
+            justify-content: center;
+            align-content: center;
+        }
 
-        .japtxt {
-            font-size: 20px;
-            margin: 0;
-            padding: 0px 8px 0px 0px;
+        .softicon {
+            grid-area: softicon1;
+            justify-content: center;
+            align-content: center;
+        }
+
+        .spa {
+            grid-area: spa;
+
+            .spatxt {
+                font-size: 20px;
+                margin: 0;
+                padding: 0px 8px 0px 0px;
+            }
+        }
+
+        .eng {
+            grid-area: eng;
+
+            .engtxt {
+                font-size: 20px;
+                margin: 0;
+                padding: 0px 8px 0px 0px;
+            }
+        }
+
+        .jap {
+            grid-area: jap;
+
+            .japtxt {
+                font-size: 20px;
+                margin: 0;
+                padding: 0px 8px 0px 0px;
+            }
         }
     }
 }
+
 
 
 /* Experience page */
