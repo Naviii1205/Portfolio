@@ -8,6 +8,12 @@
     column-gap: 50px;
     grid-template-columns: 1fr 2fr;
 
+    @media (max-width: 991px) {
+        display: grid;
+        row-gap: 50px;
+        grid-template-columns: none;
+    }
+
     .contimgdiv {
         display: grid;
         justify-content: center;
@@ -15,6 +21,14 @@
         .contimg {
             width: 200px;
             border-radius: 4px;
+
+            @media (max-width: 991px) {
+                width: 250px;
+            }
+
+            @media (max-width: 500px) {
+                width: 100%;
+            }
         }
     }
 

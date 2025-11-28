@@ -412,6 +412,13 @@ main .indexprotxt p {
   column-gap: 50px;
   grid-template-columns: 1fr 2fr;
 }
+@media (max-width: 991px) {
+  .contact {
+    display: grid;
+    row-gap: 50px;
+    grid-template-columns: none;
+  }
+}
 .contact .contimgdiv {
   display: grid;
   justify-content: center;
@@ -419,6 +426,16 @@ main .indexprotxt p {
 .contact .contimgdiv .contimg {
   width: 200px;
   border-radius: 4px;
+}
+@media (max-width: 991px) {
+  .contact .contimgdiv .contimg {
+    width: 250px;
+  }
+}
+@media (max-width: 500px) {
+  .contact .contimgdiv .contimg {
+    width: 100%;
+  }
 }
 .contact h3 {
   text-align: center;
