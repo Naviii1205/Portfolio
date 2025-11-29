@@ -6,7 +6,7 @@
 .contact {
     display: grid;
     column-gap: 50px;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr 1.7fr;
 
     @media (max-width: 991px) {
         display: grid;
@@ -34,6 +34,7 @@
 
     h3 {
         text-align: center;
+        color: map.get(colormap.$colors, secondary-color);
     }
 
     .continfo {
@@ -42,6 +43,7 @@
 
     .contlist {
         list-style: none;
+        color: map.get(colormap.$colors, secondary-color);
     }
 
     .nametlt {

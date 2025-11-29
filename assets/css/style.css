@@ -275,13 +275,18 @@ main .indexprotxt p {
 .experiencemain .edu {
   display: grid;
   grid-template-columns: 1fr 2fr;
-  grid-template-areas: "edutlt  kaoedu" "edulist  kaoedu";
+  grid-template-areas: "tlt tlt" "edutlt  kaoedu" "edulist  kaoedu";
 }
 @media (max-width: 991px) {
   .experiencemain .edu {
     display: grid;
-    grid-template-areas: "edutlt  kaoedu" "edulist  edulist";
+    grid-template-areas: "tlt tlt" "edutlt  kaoedu" "edulist  edulist";
   }
+}
+.experiencemain .edu .maintlt {
+  grid-area: tlt;
+  text-align: center;
+  padding: 20px;
 }
 .experiencemain .edu .kaoedu {
   grid-area: kaoedu;
@@ -290,7 +295,7 @@ main .indexprotxt p {
   align-content: center;
 }
 .experiencemain .edu .kaoedu p {
-  font-size: 40px;
+  font-size: 55px;
 }
 @media (max-width: 991px) {
   .experiencemain .edu .kaoedu p {
@@ -329,7 +334,7 @@ main .indexprotxt p {
   align-content: center;
 }
 .experiencemain .exp .kaoexp p {
-  font-size: 40px;
+  font-size: 50px;
 }
 @media (max-width: 991px) {
   .experiencemain .exp .kaoexp p {
@@ -351,17 +356,22 @@ main .indexprotxt p {
   justify-content: center;
   direction: rtl;
 }
+@media (max-width: 991px) {
+  .experiencemain .exp .explist {
+    justify-content: start;
+  }
+}
 .experiencemain .soft-lang {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-areas: "softtlt langtlt" "softicon1 spa" ". eng" " . jap";
+  grid-template-areas: "langtlt softtlt" "spa softicon1" "eng softicon2" "jap . ";
   text-align: center;
 }
 @media (max-width: 991px) {
   .experiencemain .soft-lang {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-areas: "softtlt " "softicon1" "langtlt" "spa" "eng" "jap";
+    grid-template-areas: "softtlt " "softicon1" "softicon2" "langtlt" "spa" "eng" "jap";
     text-align: center;
   }
 }
@@ -374,9 +384,15 @@ main .indexprotxt p {
   text-align: center;
   justify-content: center;
   align-content: center;
+  padding: 10px;
 }
-.experiencemain .soft-lang .softicon {
+.experiencemain .soft-lang .softcodeicon {
   grid-area: softicon1;
+  justify-content: center;
+  align-content: center;
+}
+.experiencemain .soft-lang .softarticon {
+  grid-area: softicon2;
   justify-content: center;
   align-content: center;
 }
@@ -410,7 +426,7 @@ main .indexprotxt p {
 .contact {
   display: grid;
   column-gap: 50px;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 1fr 1.7fr;
 }
 @media (max-width: 991px) {
   .contact {
@@ -439,12 +455,14 @@ main .indexprotxt p {
 }
 .contact h3 {
   text-align: center;
+  color: rgb(13, 13, 13);
 }
 .contact .continfo {
   text-align: center;
 }
 .contact .contlist {
   list-style: none;
+  color: rgb(13, 13, 13);
 }
 .contact .nametlt {
   color: rgb(13, 13, 13);
