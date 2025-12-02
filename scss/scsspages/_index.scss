@@ -2,11 +2,12 @@
 @use "sass:map";
 @use "../utilities/maps" as colormap;
 @use "../utilities/mixin";
+@use "../utilities/variables";
 
 main {
     padding: 40px;
     display: grid;
-    row-gap: 50px;
+    row-gap: variables.$row-gap1;
 
     div {
         background-color: map.get(colormap.$colors, primary-color);
@@ -79,12 +80,12 @@ main {
         grid-template-areas:
             " . btn . "
         ;
-        padding: 5px;
 
         a {
             display: grid;
             grid-area: btn;
             text-decoration: none;
+            padding: 5px;
 
             button {
                 color: map.get(colormap.$colors, secondary-color);
@@ -98,6 +99,7 @@ main {
         padding: 0;
 
         p {
+            padding: 5px;
             color: map.get(colormap.$colors, secondary-color);
         }
     }

@@ -1,6 +1,7 @@
 /* Header */
 @use "sass:map";
 @use "../utilities/maps" as colormap;
+@use "../utilities/variables";
 
 header {
     background-color: map.get(colormap.$colors, secondary-color);
@@ -16,7 +17,7 @@ header {
             }
 
             .logo {
-                width: 50px;
+                width: variables.$tamaño-logo;
             }
 
             .offb {

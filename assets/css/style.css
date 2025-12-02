@@ -105,12 +105,12 @@ main .indexprobtn {
   display: grid;
   grid-template-columns: 1fr 3fr 1fr;
   grid-template-areas: " . btn . ";
-  padding: 5px;
 }
 main .indexprobtn a {
   display: grid;
   grid-area: btn;
   text-decoration: none;
+  padding: 5px;
 }
 main .indexprobtn a button {
   color: rgb(13, 13, 13);
@@ -121,6 +121,7 @@ main .indexprotxt {
   padding: 0;
 }
 main .indexprotxt p {
+  padding: 5px;
   color: rgb(13, 13, 13);
 }
 
@@ -193,6 +194,13 @@ main .indexprotxt p {
   position: relative;
   padding: 5px;
   margin: 15px;
+  overflow: hidden;
+}
+.project div:hover .imge {
+  transform: scale(1.5);
+}
+.project div:hover .imgp {
+  transform: scale(1.5);
 }
 .project div:hover:after {
   content: "";
@@ -208,14 +216,17 @@ main .indexprotxt p {
   width: 100%;
   height: 100%;
   padding: 5px;
+  transition: transform 0.5s;
 }
 .project div .imge {
   width: 100%;
   height: 100%;
   padding: 5px;
+  transition: transform 0.5s;
 }
 .project div:hover p {
   opacity: 1;
+  transform: translate(0);
 }
 .project div .full {
   width: 80%;
@@ -226,6 +237,8 @@ main .indexprotxt p {
   color: rgb(255, 255, 255);
   z-index: 2;
   opacity: 0;
+  transform: translateX(-1000px);
+  transition: transform 0.5s;
 }
 @media (max-width: 760px) {
   .project div .full {
@@ -248,6 +261,8 @@ main .indexprotxt p {
   color: rgb(255, 255, 255);
   z-index: 2;
   opacity: 0;
+  transform: translateX(-1000px);
+  transition: transform 0.5s;
 }
 @media (max-width: 760px) {
   .project div .empty {
@@ -264,6 +279,17 @@ main .indexprotxt p {
 
 /* Projects page */
 /* Experience page */
+.experiencemain .soft-lang .spa .spatxt, .experiencemain .soft-lang .eng .engtxt, .experiencemain .soft-lang .jap .japtxt {
+  font-size: 20px;
+  margin: 0;
+  padding: 0px 8px 0px 0px;
+}
+
+.experiencemain .soft-lang .langtlt, .experiencemain .soft-lang .softcodeicon, .experiencemain .soft-lang .softarticon {
+  justify-content: center;
+  align-content: center;
+}
+
 .experiencemain {
   display: grid;
   row-gap: 35px;
@@ -382,45 +408,23 @@ main .indexprotxt p {
 .experiencemain .soft-lang .langtlt {
   grid-area: langtlt;
   text-align: center;
-  justify-content: center;
-  align-content: center;
   padding: 10px;
 }
 .experiencemain .soft-lang .softcodeicon {
   grid-area: softicon1;
-  justify-content: center;
-  align-content: center;
 }
 .experiencemain .soft-lang .softarticon {
   grid-area: softicon2;
-  justify-content: center;
-  align-content: center;
 }
 .experiencemain .soft-lang .spa {
   grid-area: spa;
 }
-.experiencemain .soft-lang .spa .spatxt {
-  font-size: 20px;
-  margin: 0;
-  padding: 0px 8px 0px 0px;
-}
 .experiencemain .soft-lang .eng {
   grid-area: eng;
-}
-.experiencemain .soft-lang .eng .engtxt {
-  font-size: 20px;
-  margin: 0;
-  padding: 0px 8px 0px 0px;
 }
 .experiencemain .soft-lang .jap {
   grid-area: jap;
 }
-.experiencemain .soft-lang .jap .japtxt {
-  font-size: 20px;
-  margin: 0;
-  padding: 0px 8px 0px 0px;
-}
-
 /* Experience page */
 /* Contact page */
 .contact {

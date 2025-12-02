@@ -2,11 +2,13 @@
 @use "sass:map";
 @use "../utilities/maps" as colormap;
 @use "../utilities/mixin";
+@use "../utilities/variables";
+@use "../utilities/extend";
 
 
 .experiencemain {
     display: grid;
-    row-gap: 35px;
+    row-gap: variables.$row-gap2;
 
     div {
         border-radius: 4px;
@@ -115,7 +117,7 @@
 
             @media (max-width: 991px) {
                 justify-content: start;
-                }
+            }
         }
     }
 
@@ -154,30 +156,25 @@
         .langtlt {
             grid-area: langtlt;
             text-align: center;
-            justify-content: center;
-            align-content: center;
+            @extend %grid-aling;
             padding: 10px;
         }
 
         .softcodeicon {
             grid-area: softicon1;
-            justify-content: center;
-            align-content: center;
+            @extend %grid-aling;
         }
 
         .softarticon {
             grid-area: softicon2;
-            justify-content: center;
-            align-content: center;
+            @extend %grid-aling;
         }
 
         .spa {
             grid-area: spa;
 
             .spatxt {
-                font-size: 20px;
-                margin: 0;
-                padding: 0px 8px 0px 0px;
+                @extend %exp-text-style;
             }
         }
 
@@ -185,9 +182,7 @@
             grid-area: eng;
 
             .engtxt {
-                font-size: 20px;
-                margin: 0;
-                padding: 0px 8px 0px 0px;
+                @extend %exp-text-style;
             }
         }
 
@@ -195,9 +190,7 @@
             grid-area: jap;
 
             .japtxt {
-                font-size: 20px;
-                margin: 0;
-                padding: 0px 8px 0px 0px;
+                @extend %exp-text-style;
             }
         }
     }

@@ -2,15 +2,16 @@
 @use "sass:map";
 @use "../utilities/maps" as colormap;
 @use "../utilities/mixin";
+@use "../utilities/variables";
 
 .contact {
     display: grid;
-    column-gap: 50px;
+    column-gap: variables.$column-gap;
     grid-template-columns: 1fr 1.7fr;
 
     @media (max-width: 991px) {
         display: grid;
-        row-gap: 50px;
+        row-gap: variables.$row-gap1;
         grid-template-columns: none;
     }
 
