@@ -1,5 +1,5 @@
 body {
-  background-image: url("/assets/img/back.webp");
+  background-image: url("../img/back.webp");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -9,7 +9,7 @@ body {
 }
 
 .lighttheme {
-  background-image: url("/assets/img/lightback.webp");
+  background-image: url("../img/back.webp");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
