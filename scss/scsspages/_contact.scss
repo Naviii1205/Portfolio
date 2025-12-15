@@ -33,13 +33,14 @@
         }
     }
 
-    h3 {
+    h2 {
         text-align: center;
         color: map.get(colormap.$colors, secondary-color);
     }
 
     .continfo {
         text-align: center;
+        color: map.get(colormap.$colors, secondary-color);
     }
 
     .contlist {
@@ -49,18 +50,22 @@
 
     .nametlt {
         color: map.get(colormap.$colors, secondary-color);
+        font-weight: bold;
     }
 
     .emailtlt {
         color: map.get(colormap.$colors, secondary-color);
+        font-weight: bold;
     }
 
     .numbertlt {
         color: map.get(colormap.$colors, secondary-color);
+        font-weight: bold;
     }
 
     .texttlt {
         color: map.get(colormap.$colors, secondary-color);
+        font-weight: bold;
     }
 
     .formbtn {
